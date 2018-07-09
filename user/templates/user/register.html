@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    账号:<input name="uname" maxlength="10"><br>
+    密码:<input name="upwd" maxlength="10" type="password"><br>
+    验证码:<input name="yzm" maxlength="10"><img src="checkcode" onclick="refresh_code(this)" title="单击刷新" align="bottom"><br>
+    <input type="submit" value="注册">
+</form>
+</body>
+</html>
+<script>
+    function refresh_code(t){
+        t.src+='?';
+    }
+</script>
